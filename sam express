@@ -1,0 +1,327 @@
+index.html  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam Express | Lavado de autos a domicilio</title>
+
+<style>
+:root {
+  --fondo: #101820;
+  --panel: #1b2732;
+  --plata: #d4dce4;
+  --azul: #39c5e8;
+  --texto: #f4f7fa;
+  --suave: #b7c3ce;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+header {
+  padding: 35px 18px;
+  text-align: center;
+  background: linear-gradient(135deg, #080d12, #263746);
+  border-bottom: 2px solid var(--azul);
+}
+.logo {
+  font-size: clamp(32px, 7vw, 48px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--plata);
+}
+.logo span { color: var(--azul); }
+header p { color: var(--suave); margin-bottom: 0; }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 14px;
+  background: #080d12;
+}
+nav a {
+  color: var(--plata);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { color: var(--azul); }
+main {
+  width: min(1050px, 92%);
+  margin: auto;
+}
+section { padding: 32px 0; }
+h2 {
+  color: var(--azul);
+  text-align: center;
+  margin-top: 0;
+}
+.intro {
+  text-align: center;
+  padding: 35px 10px;
+}
+.intro h1 { font-size: clamp(27px, 5vw, 42px); }
+.intro p { color: var(--suave); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid #435360;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+}
+.vehicle { font-size: 42px; }
+.card h3 { margin: 8px 0; color: var(--plata); }
+.price { font-size: 28px; font-weight: bold; color: var(--azul); }
+.small { color: var(--suave); font-size: 14px; }
+.included {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 20px;
+}
+.included li { margin: 8px 0; }
+.extra {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #435360;
+}
+.extra input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--azul);
+  margin-top: 4px;
+}
+.extra label { flex: 1; cursor: pointer; }
+.extra strong { color: var(--azul); white-space: nowrap; }
+.calculator {
+  background: var(--panel);
+  border: 1px solid var(--azul);
+  border-radius: 14px;
+  padding: 22px;
+}
+label { font-weight: bold; }
+select {
+  display: block;
+  width: 100%;
+  margin: 8px 0 20px;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #71808d;
+  background: #101820;
+  color: white;
+  font-size: 16px;
+}
+.total {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--azul);
+  margin: 20px 0;
+}
+button, .whatsapp {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  background: var(--azul);
+  color: #07151b;
+}
+.whatsapp {
+  margin-top: 12px;
+  background: #25d366;
+  color: #062b14;
+}
+button:hover, .whatsapp:hover { opacity: .88; }
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  background: #080d12;
+  color: var(--suave);
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">SAM <span>EXPRESS</span></div>
+  <p>Lavado de autos a domicilio</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#precios">Precios</a>
+  <a href="#extras">Extras</a>
+  <a href="#solicitar">Solicitar servicio</a>
+</nav>
+
+<main>
+  <section class="intro" id="inicio">
+    <h1>Tu auto limpio, sin salir de casa</h1>
+    <p>Nosotros vamos hasta donde estés. Servicio práctico y cuidado para tu vehículo.</p>
+    <a class="whatsapp" href="#solicitar">Solicita tu lavado</a>
+  </section>
+
+  <section id="precios">
+    <h2>Precios a domicilio</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="vehicle">🚗</div>
+        <h3>Sedán</h3>
+        <div class="price">$8.00</div>
+      </div>
+      <div class="card">
+        <div class="vehicle">🚙</div>
+        <h3>SUV pequeña</h3>
+        <div class="price">$9.00</div>
+      </div>
+      <div class="card">
+        <div class="vehicle">🚙</div>
+        <h3>SUV grande</h3>
+        <div class="price">$10.00</div>
+      </div>
+      <div class="card">
+        <div class="vehicle">🚘</div>
+        <h3>4x4</h3>
+        <div class="price">$12.00</div>
+      </div>
+      <div class="card">
+        <div class="vehicle">🏍️</div>
+        <h3>Motocicleta</h3>
+        <div class="price">$4.00</div>
+      </div>
+    </div>
+    <p class="small" style="text-align:center">
+      Los precios corresponden al servicio a domicilio.
+    </p>
+  </section>
+
+  <section>
+    <h2>¿Qué incluye el lavado?</h2>
+    <div class="included">
+      <ul>
+        <li>Lavado básico del vehículo.</li>
+        <li>Perfume para el interior.</li>
+        <li>Armor All para el cuidado de superficies interiores compatibles.</li>
+        <li>Silicona para las llantas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="extras">
+    <h2>Tratamientos adicionales</h2>
+    <div class="included">
+      <div class="extra">
+        <input type="checkbox" id="cera" onchange="calcular()">
+        <label for="cera">
+          Cera líquida
+          <div class="small">Un extra para el cuidado y acabado de la pintura.</div>
+        </label>
+        <strong>+$10.00</strong>
+      </div>
+      <div class="extra">
+        <input type="checkbox" id="vidrios" onchange="calcular()">
+        <label for="vidrios">
+          Tratamiento para lluvia ácida en vidrios
+          <div class="small">Tratamiento adicional para los cristales.</div>
+        </label>
+        <strong>+$10.00</strong>
+      </div>
+      <p class="small">Cada tratamiento cuesta $10 adicionales, sin importar el tipo de vehículo.</p>
+    </div>
+  </section>
+
+  <section id="solicitar">
+    <h2>Calcula y solicita tu servicio</h2>
+    <div class="calculator">
+      <label for="vehiculo">Selecciona tu vehículo:</label>
+      <select id="vehiculo" onchange="calcular()">
+        <option value="8">Sedán — $8.00</option>
+        <option value="9">SUV pequeña — $9.00</option>
+        <option value="10">SUV grande — $10.00</option>
+        <option value="12">4x4 — $12.00</option>
+        <option value="4">Motocicleta — $4.00</option>
+      </select>
+
+      <div id="resumen" class="small"></div>
+      <div class="total">Total: $<span id="total">8.00</span></div>
+
+      <button type="button" onclick="calcular()">Actualizar total</button>
+      <a class="whatsapp" id="pedir" href="#" target="_blank" rel="noopener">
+        Solicitar por WhatsApp
+      </a>
+      <p class="small">El botón abrirá WhatsApp con el resumen de tu solicitud. El servicio se confirma por mensaje.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>SAM EXPRESS</strong>
+  <p>Lavado de autos a domicilio</p>
+  <p>Gracias por confiar en nosotros.</p>
+</footer>
+
+<script>
+function calcular() {
+  const select = document.getElementById("vehiculo");
+  const precio = Number(select.value);
+  const cera = document.getElementById("cera").checked;
+  const vidrios = document.getElementById("vidrios").checked;
+
+  let total = precio;
+  const extras = [];
+
+  if (cera) {
+    total += 10;
+    extras.push("Cera líquida: $10.00");
+  }
+
+  if (vidrios) {
+    total += 10;
+    extras.push("Tratamiento para lluvia ácida en vidrios: $10.00");
+  }
+
+  const vehiculo = select.options[select.selectedIndex].text;
+  document.getElementById("total").textContent = total.toFixed(2);
+
+  document.getElementById("resumen").textContent =
+    "Vehículo: " + vehiculo +
+    " | Extras: " + (extras.length ? extras.join(", ") : "Ninguno");
+
+  const mensaje =
+    "Hola, Sam Express. Quiero solicitar un lavado a domicilio.\n" +
+    "Vehículo: " + vehiculo + "\n" +
+    "Lavado básico incluye perfume, Armor All y silicona para llantas.\n" +
+    "Extras: " + (extras.length ? extras.join(", ") : "Ninguno") + "\n" +
+    "Total estimado: $" + total.toFixed(2) + "\n" +
+    "¿Podemos coordinar el servicio?";
+
+  const telefono = "50762453186";
+  document.getElementById("pedir").href =
+    "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+}
+
+calcular();
+</script>
+</body>
+</html>
